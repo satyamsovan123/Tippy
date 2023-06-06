@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,13 +16,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S4N-np-Cxy" userLabel="MainView">
+                                <rect key="frame" x="10" y="10" width="394" height="876"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9qK-3V-Ndf" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="433"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-Zm-32h" userLabel="LabelStackView">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="433"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-99-eJ2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="144.5"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aN3-OQ-trI">
+                                                        <rect key="frame" x="0.0" y="144.5" width="113.5" height="144"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total people" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izH-24-jzI">
+                                                        <rect key="frame" x="0.0" y="288.5" width="113.5" height="144.5"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-sr-zzI" userLabel="FieldStackView">
+                                                <rect key="frame" x="123.5" y="0.0" width="270.5" height="433"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" toolTip="Enter total amount" borderStyle="roundedRect" placeholder="₹ 1000.00" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="co7-nj-hr6" userLabel="TotalAmountField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270.5" height="144.5"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Enter total amount"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" toolTip="Enter tip percent" borderStyle="roundedRect" placeholder="10" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-gw-MIc" userLabel="TipPercentField">
+                                                        <rect key="frame" x="0.0" y="144.5" width="270.5" height="144"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Enter tip percent"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" toolTip="Enter total persons" borderStyle="roundedRect" placeholder="2" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LFn-zn-NLB" userLabel="TotalPersonField">
+                                                        <rect key="frame" x="0.0" y="288.5" width="270.5" height="144.5"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Enter total persons"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="la5-QK-tPD" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="443" width="394" height="433"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Calculate total amount per person" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXz-yW-zLI">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="399"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Calculate">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person is ₹ 550.00." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-Uo-0ya">
+                                                <rect key="frame" x="0.0" y="409" width="394" height="24"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9qK-3V-Ndf" secondAttribute="trailing" id="AoR-ld-A5V"/>
+                                    <constraint firstItem="9qK-3V-Ndf" firstAttribute="top" secondItem="S4N-np-Cxy" secondAttribute="top" id="OZ6-oW-279"/>
+                                    <constraint firstAttribute="trailing" secondItem="la5-QK-tPD" secondAttribute="trailing" id="XTT-FM-KnE"/>
+                                    <constraint firstItem="la5-QK-tPD" firstAttribute="leading" secondItem="S4N-np-Cxy" secondAttribute="leading" id="bn3-cu-mgu"/>
+                                    <constraint firstAttribute="bottom" secondItem="la5-QK-tPD" secondAttribute="bottom" id="peK-eE-9Tq"/>
+                                    <constraint firstItem="9qK-3V-Ndf" firstAttribute="leading" secondItem="S4N-np-Cxy" secondAttribute="leading" id="z96-zv-iU9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="S4N-np-Cxy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="7Rt-B9-rOf"/>
+                            <constraint firstAttribute="bottom" secondItem="S4N-np-Cxy" secondAttribute="bottom" constant="10" id="MvH-x0-TaM"/>
+                            <constraint firstItem="S4N-np-Cxy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="Wwb-ck-2Fs"/>
+                            <constraint firstItem="S4N-np-Cxy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sX1-8H-M9E"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-2"/>
+            <point key="canvasLocation" x="75.362318840579718" y="-2.0089285714285712"/>
         </scene>
     </scenes>
     <resources>
