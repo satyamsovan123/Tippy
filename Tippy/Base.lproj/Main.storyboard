@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -14,34 +14,34 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="S4N-np-Cxy" userLabel="MainView">
-                                <rect key="frame" x="30" y="274.66666666666669" width="333" height="303.00000000000006"/>
+                                <rect key="frame" x="30" y="245" width="354" height="406.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9qK-3V-Ndf" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="137"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="136.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-Zm-32h" userLabel="LabelStackView">
-                                                <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="137"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="136.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-99-eJ2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="25.5"/>
                                                         <color key="tintColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aN3-OQ-trI">
-                                                        <rect key="frame" x="0.0" y="55.666666666666622" width="113.66666666666667" height="25.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="55.5" width="113.5" height="25.5"/>
                                                         <color key="tintColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total people" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izH-24-jzI">
-                                                        <rect key="frame" x="0.0" y="111.33333333333331" width="113.66666666666667" height="25.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="111" width="113.5" height="25.5"/>
                                                         <color key="tintColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,24 +50,24 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-sr-zzI" userLabel="FieldStackView">
-                                                <rect key="frame" x="143.66666666666663" y="0.0" width="189.33333333333337" height="137"/>
+                                                <rect key="frame" x="143.5" y="0.0" width="210.5" height="136.5"/>
                                                 <subviews>
                                                     <textField toolTip="Enter total amount" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="₹ 1000.00" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="co7-nj-hr6" userLabel="TotalAmountField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter total amount"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
                                                     </textField>
                                                     <textField toolTip="Enter tip percent" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="10" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-gw-MIc" userLabel="TipPercentField">
-                                                        <rect key="frame" x="0.0" y="55.666666666666622" width="189.33333333333334" height="25.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="55.5" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter tip percent"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
                                                     </textField>
                                                     <textField toolTip="Enter total persons" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="2" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LFn-zn-NLB" userLabel="TotalPersonField">
-                                                        <rect key="frame" x="0.0" y="111.33333333333331" width="189.33333333333334" height="25.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="111" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter total persons"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -79,10 +79,10 @@
                                         <color key="tintColor" name="AccentColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="la5-QK-tPD" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="197" width="333" height="106"/>
+                                        <rect key="frame" x="0.0" y="196.5" width="354" height="210"/>
                                         <subviews>
                                             <button toolTip="Calculate total amount per person" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXz-yW-zLI">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="JOW-dN-yOX"/>
@@ -96,12 +96,18 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount per person is ₹ 550.00." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-Uo-0ya">
-                                                <rect key="frame" x="0.0" y="67.999999999999943" width="333" height="38"/>
+                                                <rect key="frame" x="0.0" y="80" width="354" height="50"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BasketAndCoins" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-Za-xDJ" userLabel="BasketAndCoinsImageView">
+                                                <rect key="frame" x="0.0" y="160" width="354" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="UWO-bA-by8"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="tintColor" name="AccentColor"/>
                                     </stackView>
@@ -135,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BasketAndCoins" width="1024" height="1024"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
