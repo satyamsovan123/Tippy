@@ -52,21 +52,21 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-sr-zzI" userLabel="FieldStackView">
                                                 <rect key="frame" x="143.5" y="0.0" width="210.5" height="136.5"/>
                                                 <subviews>
-                                                    <textField toolTip="Enter total amount" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="₹ 1000.00" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="co7-nj-hr6" userLabel="TotalAmountField">
+                                                    <textField toolTip="Enter total amount" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="₹ 1000.00" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="co7-nj-hr6" userLabel="TotalAmountField">
                                                         <rect key="frame" x="0.0" y="0.0" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter total amount"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
                                                     </textField>
-                                                    <textField toolTip="Enter tip percent" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="10" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-gw-MIc" userLabel="TipPercentField">
+                                                    <textField toolTip="Enter tip percent" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="10" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-gw-MIc" userLabel="TipPercentField">
                                                         <rect key="frame" x="0.0" y="55.5" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter tip percent"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" smartInsertDeleteType="yes"/>
                                                     </textField>
-                                                    <textField toolTip="Enter total persons" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="2" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LFn-zn-NLB" userLabel="TotalPersonField">
+                                                    <textField toolTip="Enter total persons" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="2" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LFn-zn-NLB" userLabel="TotalPersonField">
                                                         <rect key="frame" x="0.0" y="111" width="210.5" height="25.5"/>
                                                         <accessibility key="accessibilityConfiguration" label="Enter total persons"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,6 +94,11 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onCalculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rnl-V3-YYQ"/>
                                                 </connections>
@@ -139,8 +144,8 @@
                     </view>
                     <connections>
                         <outlet property="message" destination="kJp-Uo-0ya" id="MVc-s8-cwe"/>
-                        <outlet property="tipAmount" destination="co7-nj-hr6" id="QBV-dG-L1S"/>
                         <outlet property="tipPercent" destination="2XQ-gw-MIc" id="iCX-W4-tTn"/>
+                        <outlet property="totalAmount" destination="co7-nj-hr6" id="QBV-dG-L1S"/>
                         <outlet property="totalPeople" destination="LFn-zn-NLB" id="frD-T5-Wms"/>
                     </connections>
                 </viewController>

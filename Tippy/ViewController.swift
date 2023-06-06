@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     // Error message
     let errorMessage: String = "Please enter some valid values in the above fields."
     
-    // Prefix for success message
+    // CONSTANT: Prefix for success message
     let messagePrefix: String = "The total amount per person is ₹"
     
-    // Reference to tip amount field
-    @IBOutlet weak var tipAmount: UITextField!
+    // Reference to total amount field
+    @IBOutlet weak var totalAmount: UITextField!
     
     // Reference to tip percent field
     @IBOutlet weak var tipPercent: UITextField!
@@ -27,29 +27,29 @@ class ViewController: UIViewController {
     // Reference to message label
     @IBOutlet weak var message: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // On inital load, show default values (0.0) to user
+        // On inital load, show default values (0) to user
         setDefaultValuesInUI()
     }
-
-    // Defines when user presses calculate button
+    
+    // Defines what happens when user presses calculate button
     @IBAction func onCalculatePressed(_ sender: UIButton) {
         
-        // Looks for single or multiple taps.
+        // Looks for single or multiple taps and dismisses keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         
         // Checking for errors in data
-        let errorInData = checkErrorInData(totalAmount: tipAmount.text!, tipPercent: tipPercent.text!, totalPeople: totalPeople.text!)
+        let errorInData = checkErrorInData(totalAmount: totalAmount.text!, tipPercent: tipPercent.text!, totalPeople: totalPeople.text!)
         
         var totalAmountPerPerson: Double = 0
         
         // If there are no errors in data, calculate total amount
         if(!errorInData) {
-            totalAmountPerPerson = calculateTotalAmount(totalAmount: Double(tipAmount.text!)!, tipPercent: Double(tipPercent.text!)!, totalPeople: Double(totalPeople.text!)!)
+            totalAmountPerPerson = calculateTotalAmount(totalAmount: Double(totalAmount.text!)!, tipPercent: Double(tipPercent.text!)!, totalPeople: Double(totalPeople.text!)!)
             
             getAndSetMessageInUI(totalAmountPerPerson: totalAmountPerPerson)
         } else {
@@ -62,13 +62,13 @@ class ViewController: UIViewController {
     func checkErrorInData(totalAmount: Any, tipPercent: Any, totalPeople: Any) -> Bool {
         var errorInData: Bool = false
         
-        // Checking for nil values and setting them to "0.0" (if there are any nil values)
+        // Checking for nil values and setting them to "0" (if there are any nil values)
         var totalAmount: Double? = nil
-        totalAmount = Double(self.tipAmount.text ?? "0.0")
+        totalAmount = Double(self.totalAmount.text ?? "0")
         var tipPercent: Double? = nil
-        tipPercent = Double(self.tipPercent.text ?? "0.0")
+        tipPercent = Double(self.tipPercent.text ?? "0")
         var totalPeople: Double? = nil
-        totalPeople = Double(self.totalPeople.text ?? "0.0")
+        totalPeople = Double(self.totalPeople.text ?? "0")
         
         // print("\(type(of: totalAmount)) totalAmount \(totalAmount), \(type(of: tipPercent)) tipPercent \(tipPercent), \(type(of: totalPeople)) totalPeople \(totalPeople), errorInData \(errorInData)")
         
@@ -82,13 +82,13 @@ class ViewController: UIViewController {
     // This function sets default values in the UI
     func setDefaultValuesInUI() -> Void {
         let defaultValues: [String : Double] = [
-            "tipAmount": 0.0,
-            "tipPercent": 0.0,
+            "tipAmount": 0,
+            "tipPercent": 0,
             "totalPeople": 0,
-            "totalAmountPerPerson": 0.0
+            "totalAmountPerPerson": 0
         ]
         
-        tipAmount.text = String(defaultValues["tipAmount"]!)
+        totalAmount.text = String(defaultValues["tipAmount"]!)
         tipPercent.text = String(defaultValues["tipPercent"]!)
         totalPeople.text = String(Int(defaultValues["totalPeople"]!))
         message.text = "\(messagePrefix) \(String(defaultValues["totalAmountPerPerson"]!))"
@@ -119,5 +119,5 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    
 }
-
