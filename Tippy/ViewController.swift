@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Error message
+    // CONSTANT: Error message
     let errorMessage: String = "Please enter some valid values in the above fields."
     
     // CONSTANT: Prefix for success message
